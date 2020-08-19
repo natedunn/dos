@@ -4,8 +4,13 @@
       Chat Header: {{ userId }}
     </div>
     <div class="flex-auto">
-      <ol class="flex flex-col justify-end h-full">
-        <Message />
+      <ol class="flex flex-col justify-end h-full pb-6">
+        <Message
+          v-for="message in messages"
+          :key="message.timetoken"
+          :text="message.entry.text"
+          :own="message.entry.uuid === user.id"
+        />
       </ol>
     </div>
     <div class="px-4 py-4 bg-cool-gray-300">
@@ -26,6 +31,11 @@ export default {
     userId: {
       type: Number,
       required: true,
+    },
+  },
+  computed: {
+    messages() {
+      return this.$store.getters['messages/messages']
     },
   },
 }
