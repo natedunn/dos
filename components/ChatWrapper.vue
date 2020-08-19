@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col overflow-hidden bg-white rounded-lg">
     <div class="px-4 py-4 bg-white border-b border-cool-gray-200">
-      Chat Header: {{ userId }}
+      {{ user.name }}
     </div>
     <div class="flex-auto">
       <ol class="flex flex-col justify-end h-full pb-6">
@@ -14,7 +14,7 @@
       </ol>
     </div>
     <div class="px-4 py-4 bg-cool-gray-300">
-      <ChatInput class="w-full" />
+      <ChatInput class="w-full" :user-id="user.id" />
     </div>
   </div>
 </template>
@@ -28,8 +28,8 @@ export default {
     ChatInput,
   },
   props: {
-    userId: {
-      type: Number,
+    user: {
+      type: Object,
       required: true,
     },
   },
