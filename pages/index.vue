@@ -9,8 +9,7 @@
       <div>Menu</div>
     </div>
     <div class="grid flex-auto grid-cols-1 gap-4 px-4 py-4 md:grid-cols-2">
-      <chat-wrapper :user-id="1" />
-      <chat-wrapper :user-id="2" />
+      <chat-wrapper v-for="user in users" :key="user.id" :user="user" />
     </div>
   </div>
 </template>
@@ -20,6 +19,14 @@ import ChatWrapper from '~/components/ChatWrapper'
 export default {
   components: {
     ChatWrapper,
+  },
+  data() {
+    return {}
+  },
+  computed: {
+    users() {
+      return this.$store.getters['users/users']
+    },
   },
 }
 </script>
