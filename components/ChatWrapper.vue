@@ -1,5 +1,9 @@
 <template>
-  <div class="flex flex-col h-full overflow-auto bg-white rounded-lg">
+  <div
+    :class="`${
+      activeUser !== user.id ? 'hidden md:' : ''
+    }flex flex-col h-full overflow-auto bg-white rounded-lg`"
+  >
     <ChatHeader :user="user" />
     <ChatRoll :user="user" :messages="messages" :new-messages="newMessages" />
     <ChatInput class="w-full" :user-id="user.id" />
@@ -19,6 +23,10 @@ export default {
       type: Object,
       required: true,
     },
+    index: {
+      type: Number,
+      required: true,
+    },
   },
   data() {
     return {
@@ -28,6 +36,9 @@ export default {
   computed: {
     messages() {
       return this.$store.getters['messages/messages']
+    },
+    activeUser() {
+      return this.$store.getters['users/activeUser']
     },
   },
 }
