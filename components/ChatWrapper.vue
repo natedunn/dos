@@ -33,6 +33,11 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      newMessages: this.$pnGetMessage('journeychat'),
+    }
+  },
   computed: {
     messages() {
       return this.$store.getters['messages/messages']
