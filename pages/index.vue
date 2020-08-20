@@ -28,6 +28,9 @@ export default {
       return this.$store.getters['users/users']
     },
   },
+  mounted() {
+    this.$store.dispatch('messages/fetchMessages')
+  },
   head() {
     return {
       link: [
