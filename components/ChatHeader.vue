@@ -1,8 +1,8 @@
 <template>
   <div
-    class="px-4 py-4 font-bold text-center bg-white border-b border-cool-gray-200"
+    class="px-4 py-4 font-bold text-center bg-white border-b shadow-lg border-cool-gray-200"
   >
-    {{ user.name }}
+    Conversation with {{ user.name }}
   </div>
 </template>
 
