@@ -1,25 +1,32 @@
 <template>
   <div class="flex flex-col h-screen bg-cool-gray-200">
     <div
-      class="flex items-center justify-between px-6 py-4 text-white bg-journey-red"
+      class="flex items-center justify-center px-6 py-4 text-white bg-journey-red"
     >
       <div>
         <span class="font-bold">JourneyChat</span>
       </div>
-      <div>Menu</div>
     </div>
     <div
-      class="grid flex-auto h-full grid-cols-1 gap-4 px-4 py-4 md:grid-cols-2"
+      class="flex flex-col flex-auto gap-4 px-4 py-4 md:grid md:grid-cols-2 chats-wrapper"
     >
-      <chat-wrapper v-for="user in users" :key="user.id" :user="user" />
+      <ChatSwitcher />
+      <ChatWrapper
+        v-for="(user, index) in users"
+        :key="user.id"
+        :index="index"
+        :user="user"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import ChatWrapper from '~/components/ChatWrapper'
+import ChatSwitcher from '@/components/ChatSwitcher'
+import ChatWrapper from '@/components/ChatWrapper'
 export default {
   components: {
+    ChatSwitcher,
     ChatWrapper,
   },
   data() {
@@ -47,4 +54,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.chats-wrapper {
+  height: calc(100% - 56px);
+}
+</style>
