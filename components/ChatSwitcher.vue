@@ -1,21 +1,17 @@
 <template>
-  <div
-    class="font-bold text-center bg-white border rounded-lg border-cool-gray-200 md:hidden chat-switcher"
-  >
-    <ul class="grid grid-cols-2">
-      <li
-        v-for="user in users"
-        :key="user.id"
-        :class="`${
-          activeUser === user.id
-            ? 'bg-blue-50 border-b-2 border-journey-blue'
-            : 'cursor-pointer hover:bg-blue-50'
-        }`"
-        @click="activeUser !== user.id ? changeActiveUser(user.id) : null"
-      >
-        {{ user.name }}
-      </li>
-    </ul>
+  <div class="grid grid-cols-2 text-center md:hidden chat-switcher">
+    <button
+      v-for="user in users"
+      :key="user.id"
+      :class="`${
+        activeUser === user.id
+          ? 'bg-blue-100 border-journey-blue'
+          : 'cursor-pointer border-cool-gray-300 bg-white hover:border-cool-gray-400 hover:bg-blue-100'
+      }`"
+      @click="activeUser !== user.id ? changeActiveUser(user.id) : null"
+    >
+      Use as <span class="font-semibold">{{ user.name }}</span>
+    </button>
   </div>
 </template>
 
@@ -38,11 +34,16 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-li {
-  @apply px-4 py-4;
+button {
+  @apply inline-block leading-6 px-2 py-3 border-2;
+  &:first-of-type {
+    @apply rounded-l-lg;
+  }
+  &:last-of-type {
+    @apply rounded-r-lg;
+  }
   &:not(:last-of-type) {
-    border-right-width: theme('borderWidth.default');
-    border-right-color: theme('borderColor.cool-gray.200');
+    @apply mr-2;
   }
 }
 </style>
