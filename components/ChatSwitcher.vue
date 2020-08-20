@@ -10,7 +10,8 @@
       }`"
       @click="activeUser !== user.id ? changeActiveUser(user.id) : null"
     >
-      Use as <span class="font-semibold">{{ user.name }}</span>
+      {{ activeUser === user.id ? 'Sending as' : 'Switch to' }}
+      <span class="font-semibold">{{ user.name }}</span>
     </button>
   </div>
 </template>
