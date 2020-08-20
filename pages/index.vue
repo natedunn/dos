@@ -8,6 +8,9 @@
       </div>
       <div>Menu</div>
     </div> -->
+    <div
+      class="grid flex-auto h-full grid-cols-1 gap-4 px-4 py-4 md:grid-cols-2"
+    >
       <chat-wrapper v-for="user in users" :key="user.id" :user="user" />
     </div>
   </div>
