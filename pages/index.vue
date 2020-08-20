@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-col h-screen bg-cool-gray-200">
-    <!-- <div
-      class="flex items-center justify-between px-6 py-4 text-white bg-cool-gray-900"
+    <div
+      class="flex items-center justify-between px-6 py-4 text-white bg-journey-red"
     >
       <div>
         <span class="font-bold">JourneyChat</span>
       </div>
       <div>Menu</div>
-    </div> -->
+    </div>
     <div
       class="grid flex-auto h-full grid-cols-1 gap-4 px-4 py-4 md:grid-cols-2"
     >

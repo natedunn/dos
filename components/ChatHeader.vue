@@ -1,5 +1,7 @@
 <template>
-  <div class="px-4 py-4 font-bold bg-white border-b border-cool-gray-200">
+  <div
+    class="px-4 py-4 font-bold text-center bg-white border-b border-cool-gray-200"
+  >
     {{ user.name }}
   </div>
 </template>
