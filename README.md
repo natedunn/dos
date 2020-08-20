@@ -1,6 +1,15 @@
 # journeychat
 
-## Build Setup
+## Accessibility
+
+- Everything has been checked for AAA standards per Web Content Accessibility Guidelines
+- Chat interface uses as much semantic HTML as possible to additionally help with screen readers.
+
+## Lighthouse Score
+
+...
+
+## Build
 
 ```bash
 # install dependencies
@@ -16,5 +25,3 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

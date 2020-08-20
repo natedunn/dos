@@ -3,7 +3,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        journey: {
+          red: '#ef1e42',
+        },
       },
     },
   },
