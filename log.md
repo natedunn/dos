@@ -11,3 +11,9 @@
 - Of course I had to start my day a bit late and working through some Eslint/VSCode issues. However, I think I got it taken it care of. Fingers crossed.
 - Hot Vuex running most of the state for the app (where relevant, but even then it still feels overkill). Vuex is also handling the initial fetching of messages from the PubNub service. Everything was quite easy.
 - Now that I can requests and updates are fully working with PubNub + Vue, I am just going to clean up things up a bit. Mostly breaking some components out and making some visual tweaks.
+- After some minor refactoring and visual tweaking, I now need to add the chat switcher for the mobile view. I am going to used Vuex to store and update the currently active chat.
+- Chat switcher is live and working well. At this point I have checked off all the requirements of the brief and nearly all of the "bonus points". Tomorrow I will spend the day adding some light animations, review the code, and refine where necessary before sending it off.
+
+## Thursday
+
+- I was unhappy with the chat roll, so I decided to make some changes. Vuex is now running mutations to help me better display the code. We now have "message groups". This will allow me to clean up the code a little, but also better visually organize the chats that are consecutively from the sender.
