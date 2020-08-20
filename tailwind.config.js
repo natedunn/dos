@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         journey: {
           red: '#ef1e42',
+          blue: '#3c42c2',
         },
       },
     },
