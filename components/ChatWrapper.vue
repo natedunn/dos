@@ -6,7 +6,7 @@
   >
     <ChatHeader :user="user" />
     <ChatRoll :user="user" :messages="messages" :new-messages="newMessages" />
-    <ChatInput class="w-full" :user-id="user.id" />
+    <ChatInput class="w-full" :user="user" />
   </div>
 </template>
 

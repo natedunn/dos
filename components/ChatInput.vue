@@ -12,8 +12,8 @@
 <script>
 export default {
   props: {
-    userId: {
-      type: String,
+    user: {
+      type: Object,
       required: true,
     },
   },
@@ -30,7 +30,7 @@ export default {
           channel: 'journeychat',
           message: {
             text: event.target.value,
-            uuid: this.userId,
+            uuid: this.user.id,
           },
         },
         // eslint-disable-next-line no-console
