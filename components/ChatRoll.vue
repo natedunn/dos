@@ -1,6 +1,11 @@
 <template>
   <div class="flex flex-col flex-auto h-full overflow-y-auto chat-roll">
     <ol class="flex flex-col self-end w-full pb-6 mt-auto">
+      <div
+        class="px-6 py-8 mx-6 mb-16 text-2xl font-bold text-center border-b-2 text-cool-gray-400 border-cool-gray-300"
+      >
+        Welcome to <br />JourneyChat
+      </div>
       <!-- Fetched Messages -->
       <Message
         v-for="message in messages"
