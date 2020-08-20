@@ -7,12 +7,25 @@
         Welcome to <br />JourneyChat
       </div>
       <!-- Fetched Messages -->
-      <Message
+      <message-group
+        v-for="(group, index) in messages"
+        :key="`mg-${index}-${user.id}`"
+        :self="group[0].entry.uuid === user.id"
+        :user="user"
+      >
+        <Message
+          v-for="message in group"
+          :key="message.timetoken + user.id"
+          :text="message.entry.text"
+          :self="message.entry.uuid === user.id"
+        />
+      </message-group>
+      <!-- <Message
         v-for="message in messages"
         :key="message.timetoken + user.id"
         :text="message.entry.text"
         :own="message.entry.uuid === user.id"
-      />
+      /> -->
       <!-- New Messages -->
       <Message
         v-for="newMessage in newMessages"
@@ -21,14 +34,15 @@
         :own="newMessage.message.uuid === user.id"
       />
     </ol>
-    <div id="anchor" class="inline-block w-full"></div>
   </div>
 </template>
 
 <script>
+import MessageGroup from '@/components/MessageGroup'
 import Message from '@/components/Message'
 export default {
   components: {
+    MessageGroup,
     Message,
   },
   props: {

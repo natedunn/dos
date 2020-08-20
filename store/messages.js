@@ -11,7 +11,19 @@ export const getters = {
 
 export const mutations = {
   [types.UPDATE_MESSAGES](state, messages) {
-    state.messages = state.messages.concat(messages)
+    const incomingMessages = messages.reduce((acc, value) => {
+      if (
+        acc.length &&
+        acc[acc.length - 1][0].entry.uuid === value.entry.uuid
+      ) {
+        acc[acc.length - 1].push(value)
+      } else {
+        acc.push([value])
+      }
+      return acc
+    }, [])
+
+    state.messages = state.messages.concat(incomingMessages)
   },
 }
 
