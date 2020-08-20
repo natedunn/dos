@@ -8,7 +8,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'static',
+  target: 'spa',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -70,5 +70,8 @@ export default {
   env: {
     subscribeKey: process.env.SUBSCRIBE_KEY,
     publishKey: process.env.PUBLISH_KEY,
+  },
+  generate: {
+    fallback: true,
   },
 }
