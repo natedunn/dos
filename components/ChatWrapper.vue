@@ -1,7 +1,7 @@
 <template>
   <div
     :class="`${
-      activeUser !== user.id ? 'hidden md:' : ''
+      activeUser === user.id ? 'hidden md:' : ''
     }flex flex-col h-full overflow-auto bg-white rounded-lg`"
   >
     <ChatHeader :user="user" />
