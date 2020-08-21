@@ -3,7 +3,7 @@
     <button
       v-for="user in users"
       :key="user.id"
-      :class="`${
+      :class="`appearance-none ${
         activeUser === user.id
           ? 'bg-blue-100 border-journey-blue'
           : 'cursor-pointer border-cool-gray-300 bg-white hover:border-cool-gray-400 hover:bg-blue-100'
