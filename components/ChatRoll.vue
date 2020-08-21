@@ -4,7 +4,7 @@
       <!-- Fetched Messages -->
       <message-group
         v-for="(group, index) in history"
-        :key="`mg-${index}-${user.id}`"
+        :key="`mg-${index}-${user.id}-${new Date().getTime()}`"
         :self="group[0].entry.uuid === user.id"
       >
         <Message
@@ -28,7 +28,7 @@
       </div>
       <message-group
         v-for="(group, index) in newMessages"
-        :key="`mg-${index}-${user.id}`"
+        :key="`mg-${index}-${user.id}-${new Date().getTime()}`"
         :self="group[0].entry.uuid === user.id"
       >
         <Message
