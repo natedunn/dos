@@ -28,7 +28,7 @@ export default {
 img {
   width: 18px;
 }
-@screen sm {
+@screen md {
   img {
     width: 23px;
   }

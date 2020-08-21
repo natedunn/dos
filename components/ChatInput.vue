@@ -77,4 +77,9 @@ export default {
 textarea {
   font-size: 16px;
 }
+@supports (-webkit-touch-callout: none) {
+  textarea {
+    @apply my-6;
+  }
+}
 </style>

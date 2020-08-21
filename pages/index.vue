@@ -67,8 +67,13 @@ export default {
 <style>
 .main-wrapper {
   height: 100vh;
-  height: -webkit-fill-available;
 }
+@supports (-webkit-touch-callout: none) {
+  .main-wrapper {
+    height: -webkit-fill-available;
+  }
+}
+
 .chats-wrapper {
   height: calc(100% - 56px);
 }
