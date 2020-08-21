@@ -1,5 +1,5 @@
 <template>
-  <li :class="`group ${self ? ' group-self' : ' group-other'}`">
+  <li :class="`group mt-6 ${self ? ' group-self' : ' group-other'}`">
     <div
       v-if="!self"
       class="flex items-center justify-center w-8 h-8 mr-auto overflow-hidden rounded-full select-none bg-cool-gray-400"
