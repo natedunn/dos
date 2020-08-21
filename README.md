@@ -1,15 +1,35 @@
-# journeychat
+# JourneyChat
 
-## Accessibility
+A demo built using Nuxt, Vuex, Tailwind, and PubNub.
 
-- Everything has been checked for AAA standards per Web Content Accessibility Guidelines
+[See the demo](https://journeychat.netlify.app/)
+
+> <b>Note:</b> Demo above saves all entries to demo PubNub account immediately
+
+## Built With
+
+- [Nuxt.js](https://nuxtjs.org/) - Vue framework of choice.
+- [Vuex](https://vuex.vuejs.org/) - Application store. Included with Nuxt out-of-the-box.
+- [Tailwind CSS](https://tailwindcss.com/) - Utility class CSS framework
+- [PubNub](https://www.pubnub.com/) - Realtime API for chat
+
+## Features
+
+### Accessibility
+
+- Every UI element has been checked to meet at least AA/AAA standards as per the Web Content Accessibility Guidelines. However please let me know if there is something I missed.
 - Chat interface uses as much semantic HTML as possible to additionally help with screen readers.
+- Everything in the interface is "tabbable" as well.
 
-## Lighthouse Score
+### Progressive Web App
 
-...
+This demo is PWA-ready. Successfully installs on both Android and iOS devices.
 
-## Build
+### PageSpeed Insight Score
+
+Google's PageSpeed Insight score (preferable to Lighthouse due it's inconsistencies) rates the demo at _84 percent on mobile_ and _93 percent on desktop_, with the greatest room for improvement in the area of performance.
+
+## Build Locally
 
 ```bash
 # install dependencies
