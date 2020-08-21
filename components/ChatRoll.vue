@@ -1,5 +1,8 @@
 <template>
-  <div class="flex flex-auto h-full overflow-y-auto scrolling-touch chat-roll">
+  <div
+    class="flex flex-auto h-full overflow-y-auto scrolling-touch chat-roll"
+    tabindex="0"
+  >
     <transition-group
       name="list"
       tag="ol"
