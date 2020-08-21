@@ -1,14 +1,9 @@
 <template>
   <div class="flex flex-col flex-auto h-full overflow-y-auto chat-roll">
-    <ol class="flex flex-col self-end w-full pb-6 mt-auto">
-      <div
-        class="px-6 py-8 mx-6 mb-16 text-2xl font-bold text-center border-b-2 text-cool-gray-400 border-cool-gray-300"
-      >
-        Welcome to <br />JourneyChat
-      </div>
+    <ol class="flex flex-col self-end w-full px-6 pt-12 pb-6 mt-auto">
       <!-- Fetched Messages -->
       <message-group
-        v-for="(group, index) in messages"
+        v-for="(group, index) in history"
         :key="`mg-${index}-${user.id}`"
         :self="group[0].entry.uuid === user.id"
         :user="user"
@@ -20,19 +15,29 @@
           :self="message.entry.uuid === user.id"
         />
       </message-group>
-      <!-- <Message
-        v-for="message in messages"
-        :key="message.timetoken + user.id"
-        :text="message.entry.text"
-        :own="message.entry.uuid === user.id"
-      /> -->
+
       <!-- New Messages -->
-      <Message
-        v-for="newMessage in newMessages"
-        :key="newMessage.timetoken + user.id"
-        :text="newMessage.message.text"
-        :own="newMessage.message.uuid === user.id"
-      />
+      <div
+        v-if="newMessages.length !== 0"
+        class="flex flex-row items-center justify-between px-6 my-8"
+      >
+        <div class="flex-auto border-b border-gray-200"></div>
+        <div class="px-4 font-semibold text-gray-400">Welcome Back</div>
+        <div class="flex-auto border-b border-gray-200"></div>
+      </div>
+      <message-group
+        v-for="(group, index) in newMessages"
+        :key="`mg-${index}-${user.id}`"
+        :self="group[0].entry.uuid === user.id"
+        :user="user"
+      >
+        <Message
+          v-for="message in group"
+          :key="message.timetoken + user.id"
+          :text="message.entry.text"
+          :self="message.entry.uuid === user.id"
+        />
+      </message-group>
     </ol>
   </div>
 </template>
@@ -50,13 +55,13 @@ export default {
       type: Object,
       required: true,
     },
-    messages: {
-      type: Array,
-      default: () => [],
+  },
+  computed: {
+    history() {
+      return this.$store.getters['messages/history']
     },
-    newMessages: {
-      type: Array,
-      default: () => [],
+    newMessages() {
+      return this.$store.getters['messages/newMessages']
     },
   },
   watch: {
