@@ -4,7 +4,7 @@
   >
     <textarea
       v-model="text"
-      class="inline-flex w-full px-4 py-2 mr-4 text-base leading-6 text-gray-700 placeholder-gray-500 bg-transparent border-b-2 border-gray-300 appearance-none resize-none focus:outline-none focus:border-journey-blue"
+      class="inline-flex w-full px-1 py-2 mr-4 text-base leading-6 text-gray-700 placeholder-gray-500 bg-transparent border-b-2 border-gray-300 appearance-none resize-none focus:outline-none focus:border-journey-blue"
       type="text"
       placeholder="Type a message"
       rows="1"
