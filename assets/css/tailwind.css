@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 html {
-  height: -webkit-fill-available;
+  height: 100%;
 }
 body {
   @apply font-sans overflow-hidden;

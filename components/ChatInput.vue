@@ -7,6 +7,7 @@
       class="inline-flex w-full px-1 py-2 mr-4 text-base leading-6 text-gray-700 placeholder-gray-500 bg-transparent border-b-2 border-gray-300 rounded-none appearance-none focus:outline-none focus:border-journey-blue"
       type="text"
       placeholder="Type a message"
+      :min-height="41"
       :max-height="350"
       rows="1"
       @keydown.enter.native="submit"
@@ -79,7 +80,7 @@ textarea {
 }
 @supports (-webkit-touch-callout: none) {
   textarea {
-    @apply my-6;
+    @apply mt-2 mb-3;
   }
 }
 </style>
