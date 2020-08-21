@@ -77,9 +77,4 @@ export default {
 textarea {
   font-size: 16px;
 }
-/* @supports (-webkit-touch-callout: none) {
-  textarea {
-    @apply mt-2 mb-3;
-  }
-} */
 </style>
