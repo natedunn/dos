@@ -62,9 +62,8 @@ export default {
                 text: this.text,
                 uuid: this.user.id,
               },
-            },
-            // eslint-disable-next-line no-console
-            (status, response) => console.log(status, response)
+            }
+            // (status, response) => console.log(status, response)
           )
           this.text = ''
         }
