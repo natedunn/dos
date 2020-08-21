@@ -30,7 +30,9 @@ export default {
     ChatWrapper,
   },
   data() {
-    return {}
+    return {
+      newMessages: this.$pnGetMessage('journeychat', this.addMessage),
+    }
   },
   computed: {
     users() {
@@ -39,6 +41,14 @@ export default {
   },
   mounted() {
     this.$store.dispatch('messages/fetchMessages')
+  },
+  methods: {
+    addMessage(message) {
+      this.$store.dispatch('messages/addMessage', {
+        entry: message.message,
+        timetoken: message.timetoken,
+      })
+    },
   },
   head() {
     return {
