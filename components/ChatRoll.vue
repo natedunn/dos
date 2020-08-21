@@ -6,7 +6,6 @@
         v-for="(group, index) in history"
         :key="`mg-${index}-${user.id}`"
         :self="group[0].entry.uuid === user.id"
-        :user="user"
       >
         <Message
           v-for="message in group"
@@ -29,7 +28,6 @@
         v-for="(group, index) in newMessages"
         :key="`mg-${index}-${user.id}`"
         :self="group[0].entry.uuid === user.id"
-        :user="user"
       >
         <Message
           v-for="message in group"
