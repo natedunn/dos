@@ -2,7 +2,7 @@
   <li :class="`group mt-6 ${self ? ' group-self' : ' group-other'}`">
     <div
       v-if="!self"
-      class="flex items-center justify-center w-8 h-8 mr-auto overflow-hidden rounded-full select-none bg-cool-gray-400"
+      class="flex items-center justify-center w-6 h-6 mr-auto overflow-hidden rounded-full select-none md:w-8 md:h-8 bg-cool-gray-400"
     >
       <img src="~/assets/svg/user.svg" />
     </div>
@@ -25,6 +25,14 @@ export default {
 </script>
 
 <style lang="postcss">
+img {
+  width: 18px;
+}
+@screen sm {
+  img {
+    width: 23px;
+  }
+}
 .group-self ol li:first-child div {
   @apply rounded-tr-none;
 }

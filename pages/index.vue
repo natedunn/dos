@@ -8,7 +8,7 @@
       </div>
     </div>
     <div
-      class="flex flex-col flex-auto gap-4 px-4 py-4 md:grid md:grid-cols-2 chats-wrapper"
+      class="flex flex-col flex-auto md:gap-4 md:px-4 md:py-4 md:grid md:grid-cols-2 chats-wrapper"
     >
       <ChatSwitcher />
       <ChatWrapper

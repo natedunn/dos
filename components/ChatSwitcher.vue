@@ -3,10 +3,10 @@
     <button
       v-for="user in users"
       :key="user.id"
-      :class="`appearance-none ${
+      :class="`appearance-none inline-block leading-6 px-2 py-2 border-b-2 ${
         activeUser === user.id
-          ? 'bg-blue-100 border-journey-blue'
-          : 'cursor-pointer border-cool-gray-300 bg-white hover:border-cool-gray-400 hover:bg-blue-100'
+          ? 'bg-blue-100 text-journey-blue border-journey-blue'
+          : 'cursor-pointer border-cool-gray-300 bg-gray-100 hover:text-gray-900 text-gray-500 hover:border-journey-blue hover:bg-blue-100'
       }`"
       @click="activeUser !== user.id ? changeActiveUser(user.id) : null"
     >
@@ -34,17 +34,4 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-button {
-  @apply inline-block leading-6 px-2 py-3 border-2;
-  &:first-of-type {
-    @apply rounded-l-lg;
-  }
-  &:last-of-type {
-    @apply rounded-r-lg;
-  }
-  &:not(:last-of-type) {
-    @apply mr-2;
-  }
-}
-</style>
+<style lang="postcss" scoped></style>
