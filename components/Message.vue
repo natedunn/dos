@@ -7,7 +7,7 @@
     }`"
   >
     <div
-      :class="`inline-block py-3 px-5 rounded-lg break-words text-left ${
+      :class="`inline-block py-3 px-5 rounded-lg text-left ${
         self
           ? 'bg-journey-blue text-white ml-auto'
           : 'bg-gray-200 text-gray-900 mr-auto'
@@ -37,5 +37,7 @@ export default {
 <style lang="postcss" scoped>
 div {
   max-width: 60%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 </style>
