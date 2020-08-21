@@ -29,6 +29,12 @@ This demo is PWA-ready. Successfully installs on both Android and iOS devices.
 
 Google's PageSpeed Insight score (preferable to Lighthouse due it's inconsistencies) rates the demo at _84 percent on mobile_ and _93 percent on desktop_, with the greatest room for improvement in the area of performance.
 
+## Dev log
+
+I wrote a simple [dev log](log.md) through my process of building this demo. Its not much, but I thought it would be fun to show my thought-process.
+
+[Read my dev log](log.md)
+
 ## Build Locally
 
 ```bash
