@@ -19,7 +19,7 @@
       <!-- New Messages -->
       <div
         v-if="newMessages.length !== 0"
-        class="flex flex-row items-center justify-between px-6 my-8"
+        class="flex flex-row items-center justify-between my-8"
       >
         <div class="flex-auto border-b border-gray-200"></div>
         <div class="px-4 font-semibold text-gray-400">Welcome Back</div>
