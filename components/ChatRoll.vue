@@ -3,7 +3,7 @@
     <transition-group
       name="list"
       tag="ol"
-      class="flex flex-col self-end w-full px-6 pt-12 mt-auto mb-8 h-100"
+      class="flex flex-col self-end w-full px-6 pt-12 pb-8 mt-auto h-100"
     >
       <!-- Previous History -->
       <MessageGroup
