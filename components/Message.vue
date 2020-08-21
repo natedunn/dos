@@ -1,6 +1,20 @@
 <template>
-  <li :class="classes">
-    {{ text }}
+  <li
+    :class="`mt-3 ${
+      self
+        ? 'text-right message message-self'
+        : 'text-left message message-other'
+    }`"
+  >
+    <div
+      :class="`inline-block py-3 px-5 rounded-lg break-words text-left ${
+        self
+          ? 'bg-journey-blue text-white ml-auto'
+          : 'bg-gray-200 text-gray-900 mr-auto'
+      }`"
+    >
+      {{ text }}
+    </div>
   </li>
 </template>
 
@@ -17,26 +31,11 @@ export default {
       default: false,
     },
   },
-  computed: {
-    classes() {
-      // const bothClasses = 'rounded-full py-3 px-4 mt-3 mx-6'
-      // const ownClasses = `bg-journey-blue text-white font-medium rounded-tr-none ml-auto ${bothClasses} own-message`
-      // const otherClasses = `bg-gray-200 text-gray-900 font-medium mr-auto rounded-tl-none ${bothClasses} other-message`
-
-      // return this.self ? ownClasses : otherClasses
-      return `rounded-full py-3 px-4 mt-3 mx-6 font-medium ${
-        this.self
-          ? 'bg-journey-blue text-white message-self'
-          : 'bg-gray-200 text-gray-900 message-other'
-      }`
-    },
-  },
 }
 </script>
 
-<style lang="postcss">
-.own-message + .own-message,
-.other-message + .other-message {
-  @apply rounded-full;
+<style lang="postcss" scoped>
+div {
+  max-width: 60%;
 }
 </style>
