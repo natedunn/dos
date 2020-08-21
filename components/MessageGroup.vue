@@ -7,17 +7,35 @@
       <img src="~/assets/svg/user.svg" />
     </div>
 
-    <ol>
-      <slot></slot>
-    </ol>
+    <transition-group name="list" tag="ol">
+      <Message
+        v-for="message in messages"
+        :key="message.timetoken"
+        :info="message"
+        :self="self"
+        :user="user"
+      />
+    </transition-group>
   </li>
 </template>
 
 <script>
+import Message from '@/components/Message'
 export default {
+  components: {
+    Message,
+  },
   props: {
     self: {
       type: Boolean,
+      required: true,
+    },
+    messages: {
+      type: Array,
+      required: true,
+    },
+    user: {
+      type: Object,
       required: true,
     },
   },

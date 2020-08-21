@@ -14,11 +14,11 @@
       }`"
     >
       <span
-        v-for="(renderedText, index) in renderedTexts"
-        :key="timetoken + user.id + index"
+        v-for="(text, index) in texts"
+        :key="'msg-' + info.timetoken + index"
         class="inline-block w-full"
       >
-        {{ renderedText }}
+        {{ text }}
       </span>
     </div>
   </li>
@@ -27,16 +27,12 @@
 <script>
 export default {
   props: {
-    user: {
+    info: {
       type: Object,
       required: true,
     },
-    timetoken: {
-      type: [String, Number],
-      required: true,
-    },
-    text: {
-      type: String,
+    user: {
+      type: Object,
       required: true,
     },
     self: {
@@ -46,8 +42,8 @@ export default {
     },
   },
   computed: {
-    renderedTexts() {
-      return this.text.split('\n')
+    texts() {
+      return this.info.entry.text.split('\n')
     },
   },
 }

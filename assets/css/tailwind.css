@@ -2,13 +2,22 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* Base */
 html {
   height: 100%;
 }
 body {
   @apply font-sans overflow-hidden;
 }
-
 @screen md {
   @apply overflow-auto;
+}
+
+/* Transitions */
+.list-enter-active {
+  transition: all 0.25s;
+}
+.list-enter /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(15px);
 }
