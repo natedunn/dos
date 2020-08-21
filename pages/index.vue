@@ -73,7 +73,6 @@ export default {
     height: -webkit-fill-available;
   }
 }
-
 .chats-wrapper {
   height: calc(100% - 56px);
 }
