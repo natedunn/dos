@@ -51,7 +51,6 @@ export const actions = {
       },
       (status, response) => {
         const messages = response.messages
-        console.log(messages)
         commit(types.UPDATE_HISTORY, messages)
       }
     )
