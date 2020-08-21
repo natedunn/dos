@@ -5,7 +5,7 @@
     }flex flex-col h-full overflow-auto bg-white rounded-lg`"
   >
     <ChatHeader :user="user" />
-    <ChatRoll :user="user" :messages="messages" :new-messages="newMessages" />
+    <ChatRoll :user="user" />
     <ChatInput class="w-full" :user="user" />
   </div>
 </template>
@@ -28,15 +28,7 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      newMessages: this.$pnGetMessage('journeychat'),
-    }
-  },
   computed: {
-    messages() {
-      return this.$store.getters['messages/messages']
-    },
     activeUser() {
       return this.$store.getters['users/activeUser']
     },
