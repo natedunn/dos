@@ -1,9 +1,5 @@
 <template>
-  <div
-    :class="`${
-      activeUser === user.id ? 'hidden md:' : ''
-    }flex flex-col h-full overflow-auto bg-white rounded-lg`"
-  >
+  <div :class="classes">
     <ChatHeader :user="user" />
     <ChatRoll :user="user" />
     <ChatInput class="w-full" :user="user" />
@@ -31,6 +27,11 @@ export default {
   computed: {
     activeUser() {
       return this.$store.getters['users/activeUser']
+    },
+    classes() {
+      return `${
+        this.activeUser === this.user.id ? 'hidden md:flex' : 'flex'
+      } flex-col h-full overflow-auto bg-white rounded-lg`
     },
   },
 }
