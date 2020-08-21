@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen bg-cool-gray-300">
+  <div class="flex flex-col bg-cool-gray-300 main-wrapper">
     <div
       class="flex items-center justify-center px-6 py-4 text-white bg-journey-red"
     >
@@ -65,8 +65,9 @@ export default {
 </script>
 
 <style>
-.h-screen {
-  min-height: -webkit-fill-available;
+.main-wrapper {
+  height: 100vh;
+  height: -webkit-fill-available;
 }
 .chats-wrapper {
   height: calc(100% - 56px);

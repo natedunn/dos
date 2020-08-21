@@ -2,6 +2,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+html {
+  height: -webkit-fill-available;
+}
 body {
   @apply font-sans;
 }
