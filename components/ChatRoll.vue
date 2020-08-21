@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="flex flex-col flex-auto h-full overflow-y-auto scrolling-touch chat-roll"
-  >
-    <ol class="flex flex-col self-end w-full px-6 pt-12 pb-6 mt-auto">
+  <div class="flex flex-auto h-full overflow-y-auto scrolling-touch chat-roll">
+    <ol class="flex flex-col self-end w-full px-6 pt-12 mt-auto mb-8 h-100">
       <!-- Fetched Messages -->
       <message-group
         v-for="(group, index) in history"
@@ -81,4 +79,4 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="postcss"></style>
