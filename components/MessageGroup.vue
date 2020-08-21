@@ -4,7 +4,7 @@
       v-if="!self"
       class="flex items-center justify-center w-6 h-6 mr-auto overflow-hidden rounded-full select-none md:w-8 md:h-8 bg-cool-gray-400"
     >
-      <img src="~/assets/svg/user.svg" />
+      <img alt="Profile Photo" src="~/assets/svg/user.svg" />
     </div>
 
     <transition-group name="list" tag="ol">

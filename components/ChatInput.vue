@@ -4,6 +4,7 @@
   >
     <TextareaAutosize
       v-model="text"
+      aria-label="Type Message"
       class="inline-flex w-full px-1 py-2 mr-4 text-base leading-6 text-gray-700 placeholder-gray-500 bg-transparent border-b-2 border-gray-300 rounded-none appearance-none focus:outline-none focus:border-journey-blue"
       type="text"
       placeholder="Type a message"
@@ -13,6 +14,7 @@
       @keydown.enter.native="submit"
     />
     <button
+      aria-label="Send Message"
       type="submit"
       :class="`flex items-start px-2 py-2 rounded-lg  ${
         text
