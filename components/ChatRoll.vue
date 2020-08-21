@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col flex-auto h-full overflow-y-scroll chat-roll">
+  <div
+    class="flex flex-col flex-auto h-full overflow-y-auto scrolling-touch chat-roll"
+  >
     <ol class="flex flex-col self-end w-full px-6 pt-12 pb-6 mt-auto">
       <!-- Fetched Messages -->
       <message-group
@@ -11,7 +13,9 @@
           v-for="message in group"
           :key="message.timetoken + user.id"
           :text="message.entry.text"
+          :timetoken="message.timetoken"
           :self="message.entry.uuid === user.id"
+          :user="user"
         />
       </message-group>
 
@@ -33,7 +37,9 @@
           v-for="message in group"
           :key="message.timetoken + user.id"
           :text="message.entry.text"
+          :timetoken="message.timetoken"
           :self="message.entry.uuid === user.id"
+          :user="user"
         />
       </message-group>
     </ol>
