@@ -31,7 +31,7 @@ export default {
     classes() {
       return `${
         this.activeUser === this.user.id ? 'hidden md:flex' : 'flex'
-      } flex-col h-full overflow-auto bg-white rounded-lg`
+      } flex-col h-full overflow-auto bg-white rounded-lg border border-gray-200`
     },
   },
 }

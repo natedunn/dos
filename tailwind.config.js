@@ -13,7 +13,9 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    backgroundColor: ['responsive', 'hover', 'focus', 'focus-within'],
+  },
   plugins: [require('@tailwindcss/ui')],
   purge: {
     enabled: process.env.NODE_ENV === 'production',
