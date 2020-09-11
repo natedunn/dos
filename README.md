@@ -1,41 +1,29 @@
-# JourneyChat
+# Dos
 
-A demo built using Nuxt, Vuex, Tailwind, and PubNub.
+A demo chat app built using [Nuxt.js](https://nuxtjs.org/), [Vuex](https://vuex.vuejs.org/), [Tailwind CSS](https://tailwindcss.com/), and [PubNub](https://www.pubnub.com/).
 
-[See the demo](https://journeychat.netlify.app/)
+[Check out the live demo](https://doschat.netlify.app/)
 
-> <b>Note:</b> Demo above saves all entries to demo PubNub account immediately
-
-## Built With
-
-- [Nuxt.js](https://nuxtjs.org/) - Vue framework of choice.
-- [Vuex](https://vuex.vuejs.org/) - Application store. Included with Nuxt out-of-the-box.
-- [Tailwind CSS](https://tailwindcss.com/) - Utility class CSS framework
-- [PubNub](https://www.pubnub.com/) - Realtime API for chat
+> <b>Note:</b> The demo above saves all entries to demo PubNub account immediately. Please do not post anything inappropriate, or I will be forced to close the live demo.
 
 ## Features
 
-### Accessibility
+### ✔ Accessibility
 
 - Every UI element has been checked to meet at least AA/AAA standards as per the Web Content Accessibility Guidelines. However please let me know if there is something I missed.
 - Chat interface uses as much semantic HTML as possible to additionally help with screen readers.
-- Everything in the interface is "tabbable" as well.
 
-### Progressive Web App
+### ✔ Progressive Web App
 
 This demo is PWA-ready. Successfully installs on both Android and iOS devices.
 
-### PageSpeed Insight Score
+### ✔ PageSpeed Insight Score
 
 Google's PageSpeed Insight score (preferable to Lighthouse due it's inconsistencies) rates the demo at _84 percent on mobile_ and _93 percent on desktop_, with the greatest room for improvement in the area of performance.
 
-## Dev log
+## Build locally
 
-I wrote a simple [dev log](log.md) through my process of building this demo. Its not much, but I thought it would be fun to show my thought-process.
-
-[Read my dev log](log.md)
-
-## Build Locally
+### Install
 
 ```bash
 # install dependencies
@@ -50,4 +38,13 @@ $ yarn start
 
 # generate static project
 $ yarn generate
+```
+
+### Connect to PubNub
+
+Make to connect your own PubNub credentials by adding your own `SUBSCRIBE_KEY` and `PUBLISH_KEY` to `.env`.
+
+```env
+SUBSCRIBE_KEY=""
+PUBLISH_KEY=""
 ```
