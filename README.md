@@ -8,16 +8,16 @@ A demo chat app built using [Nuxt.js](https://nuxtjs.org/), [Vuex](https://vuex.
 
 ## Features
 
-### ✔ Accessibility
+### ✓ Accessibility
 
 - Every UI element has been checked to meet at least AA/AAA standards as per the Web Content Accessibility Guidelines. However please let me know if there is something I missed.
 - Chat interface uses as much semantic HTML as possible to additionally help with screen readers.
 
-### ✔ Progressive Web App
+### ✓ Progressive Web App
 
 This demo is PWA-ready. Successfully installs on both Android and iOS devices.
 
-### ✔ PageSpeed Insight Score
+### ✓ PageSpeed Insight Score
 
 Google's PageSpeed Insight score (preferable to Lighthouse due it's inconsistencies) rates the demo at _84 percent on mobile_ and _93 percent on desktop_, with the greatest room for improvement in the area of performance.
 
