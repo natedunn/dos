@@ -45,7 +45,7 @@ export const actions = {
     // console.log('Working')
     PubNubVue.getInstance().history(
       {
-        channel: 'journeychat',
+        channel: 'doschat',
         count: 6,
         stringifiedTimeToken: false,
       },

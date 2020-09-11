@@ -9,7 +9,7 @@
     <div
       :class="`inline-block py-2 px-3 md:py-3 md:px-4 rounded-lg text-left text-sm md:text-base ${
         self
-          ? 'bg-journey-blue text-white ml-auto'
+          ? 'bg-blue-600 text-white ml-auto'
           : 'bg-gray-200 text-gray-900 mr-auto'
       }`"
     >

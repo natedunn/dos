@@ -1,18 +1,5 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-      },
-      colors: {
-        journey: {
-          red: '#ef1e42',
-          blue: '#3c42c2',
-        },
-      },
-    },
-  },
+  theme: {},
   variants: {
     backgroundColor: ['responsive', 'hover', 'focus', 'focus-within'],
   },

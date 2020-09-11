@@ -5,7 +5,7 @@
     <TextareaAutosize
       v-model="text"
       aria-label="Type Message"
-      class="inline-flex w-full px-1 py-2 mr-4 text-base leading-6 text-gray-700 placeholder-gray-500 bg-transparent border-b-2 border-gray-300 rounded-none appearance-none focus:outline-none focus:border-journey-blue"
+      class="inline-flex w-full px-1 py-2 mr-4 text-base leading-6 text-gray-700 placeholder-gray-500 bg-transparent border-b-2 border-gray-300 rounded-none appearance-none focus:outline-none focus:border-blue-600"
       type="text"
       placeholder="Type a message"
       :min-height="41"
@@ -18,7 +18,7 @@
       type="submit"
       :class="`flex items-start px-2 py-2 rounded-lg  ${
         text
-          ? 'opacity-75 bg-journey-blue text-white focus:opacity-100 focus:shadow-outline-blue hover:opacity-100'
+          ? 'opacity-75 bg-blue-600 text-white focus:opacity-100 focus:shadow-outline-blue hover:opacity-100'
           : 'bg-cool-gray-300 text-cool-gray-400 cursor-not-allowed'
       }`"
       @click="submit"
@@ -49,7 +49,7 @@ export default {
   },
   mounted() {
     this.$pnSubscribe({
-      channels: ['journeychat'],
+      channels: ['doschat'],
     })
   },
   methods: {
@@ -59,7 +59,7 @@ export default {
         if (this.text) {
           this.$pnPublish(
             {
-              channel: 'journeychat',
+              channel: 'doschat',
               message: {
                 text: this.text,
                 uuid: this.user.id,

@@ -3,15 +3,15 @@ import * as types from './mutation-types'
 export const state = () => ({
   users: [
     {
-      name: 'Geoff',
+      name: 'Bert',
       id: '1234',
     },
     {
-      name: 'Nate',
+      name: 'Ernie',
       id: '5678',
     },
   ],
-  activeUser: '5678',
+  activeUser: '1234',
 })
 
 export const getters = {

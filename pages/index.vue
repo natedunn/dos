@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col bg-cool-gray-300 main-wrapper">
     <div
-      class="flex items-center justify-center px-6 py-4 text-white bg-journey-red"
+      class="flex items-center justify-center px-6 py-4 text-white bg-red-600"
     >
       <div>
-        <span class="font-bold">JourneyChat</span>
+        <span class="font-bold">Welcome to Dos</span>
       </div>
     </div>
     <div
@@ -31,7 +31,7 @@ export default {
   },
   data() {
     return {
-      newMessages: this.$pnGetMessage('journeychat', this.addMessage),
+      newMessages: this.$pnGetMessage('doschat', this.addMessage),
     }
   },
   computed: {
@@ -49,17 +49,6 @@ export default {
         timetoken: message.timetoken,
       })
     },
-  },
-  head() {
-    return {
-      link: [
-        {
-          rel: 'stylesheet',
-          href:
-            'https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap',
-        },
-      ],
-    }
   },
 }
 </script>
